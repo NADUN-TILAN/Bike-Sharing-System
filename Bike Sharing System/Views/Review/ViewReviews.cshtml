@@ -1,0 +1,11 @@
+﻿@model List<Review>
+@foreach (var review in Model)
+{
+    <div class="card">
+        <div class="card-body">
+            <p>@review.Comment</p>
+            <p>⭐ @review.Rating</p>
+        </div>
+    </div>
+}
+

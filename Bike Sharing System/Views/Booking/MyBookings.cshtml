@@ -1,0 +1,20 @@
+﻿@model List<Booking>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Bike ID</th>
+            <th>Booking Date</th>
+            <th>Return Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var booking in Model)
+        {
+            <tr>
+                <td>@booking.BikeId</td>
+                <td>@booking.BookingDate.ToShortDateString()</td>
+                <td>@booking.ReturnDate.ToShortDateString()</td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,97 @@
+﻿@{
+    ViewBag.Title = "Home | Bike Sharing System";
+}
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+<style>
+    /* Custom Styles */
+    .hero {
+        background: url('/images/img-1.jpg') center/cover no-repeat;
+        color: white;
+        padding: 80px 0;
+        text-align: center;
+    }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+    .feature-icon {
+        font-size: 2rem;
+        color: #007bff;
+    }
+
+    .cta {
+        background-color: #007bff;
+        color: white;
+        padding: 30px;
+        text-align: center;
+        border-radius: 10px;
+    }
+</style>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <h1>🚲 Welcome to Bike Sharing System</h1>
+        <p class="lead">Find, rent, and share bikes easily in your city.</p>
+        <a href="/Member/Register" class="btn btn-light btn-lg">Join Now</a>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="container text-center my-5">
+    <div class="row">
+        <div class="col-md-4">
+            <i class="feature-icon bi bi-bicycle"></i>
+            <h3>Rent a Bike</h3>
+            <p>Find and rent a bike near you in just a few clicks.</p>
+        </div>
+        <div class="col-md-4">
+            <i class="feature-icon bi bi-person-plus"></i>
+            <h3>Easy Registration</h3>
+            <p>Sign up and start riding within minutes.</p>
+        </div>
+        <div class="col-md-4">
+            <i class="feature-icon bi bi-chat-left-quote"></i>
+            <h3>Read Reviews</h3>
+            <p>Check out reviews before renting a bike.</p>
+        </div>
+    </div>
+</section>
+
+<!-- How It Works -->
+<section class="container my-5">
+    <h2 class="text-center mb-4">🚀 How It Works</h2>
+    <div class="row text-center">
+        <div class="col-md-3">
+            <h4>1️⃣ Sign Up</h4>
+            <p>Register for free and create your account.</p>
+        </div>
+        <div class="col-md-3">
+            <h4>2️⃣ Find a Bike</h4>
+            <p>Search for available bikes near you.</p>
+        </div>
+        <div class="col-md-3">
+            <h4>3️⃣ Book & Ride</h4>
+            <p>Confirm your booking and start riding.</p>
+        </div>
+        <div class="col-md-3">
+            <h4>4️⃣ Leave a Review</h4>
+            <p>Share your experience and help others.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="container cta my-5">
+    <h2>Start Your Ride Today! 🚴</h2>
+    <p>Join thousands of riders and explore your city like never before.</p>
+    <a href="/Member/Register" class="btn btn-light btn-lg">Sign Up Now</a>
+</section>
+
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">

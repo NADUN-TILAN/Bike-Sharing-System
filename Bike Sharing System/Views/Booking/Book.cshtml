@@ -1,0 +1,8 @@
+﻿@model dynamic
+<form method="post" action="/Booking/ConfirmBooking">
+    <input type="hidden" name="bikeId" value="@Model.BikeId" />
+    <label>Return Date:</label>
+    <input type="date" name="returnDate" required />
+    <button type="submit" class="btn btn-primary">Book Bike</button>
+</form>
+
