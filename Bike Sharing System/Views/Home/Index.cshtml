@@ -4,33 +4,100 @@
 
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 
 <style>
-    /* Custom Styles */
+    /* Hero Section */
     .hero {
-        background: url('/images/img-1.jpg') center/cover no-repeat;
+        position: relative;
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/img-1.jpg') center/cover no-repeat;
         color: white;
-        padding: 80px 0;
+        padding: 100px 0;
         text-align: center;
+        border-radius: 15px;
     }
 
         .hero h1 {
-            font-size: 3rem;
+            font-size: 3.5rem;
             font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            opacity: 0.9;
+        }
+
+        .hero .btn {
+            font-size: 1.2rem;
+            padding: 12px 25px;
+            border-radius: 30px;
+            transition: 0.3s;
+        }
+
+            .hero .btn:hover {
+                background: white;
+                color: #007bff;
+            }
+
+    /* Features Section */
+    .feature-card {
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+        background: #fff;
+    }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
         }
 
     .feature-icon {
-        font-size: 2rem;
+        font-size: 3rem;
         color: #007bff;
+        margin-bottom: 10px;
     }
 
-    .cta {
-        background-color: #007bff;
-        color: white;
-        padding: 30px;
-        text-align: center;
+    /* How It Works */
+    .steps div {
+        padding: 20px;
         border-radius: 10px;
+        background: #f8f9fa;
+        transition: 0.3s;
     }
+
+        .steps div:hover {
+            background: #e9ecef;
+            transform: scale(1.05);
+        }
+
+    /* Call to Action */
+    .cta {
+        background: linear-gradient(135deg, #007bff, #0056b3);
+        color: white;
+        padding: 40px;
+        border-radius: 12px;
+        text-align: center;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+        .cta .btn {
+            font-size: 1.2rem;
+            padding: 12px 25px;
+            border-radius: 30px;
+            transition: 0.3s;
+            background: white;
+            color: #007bff;
+        }
+
+            .cta .btn:hover {
+                background: #0056b3;
+                color: white;
+            }
 </style>
 
 <!-- Hero Section -->
@@ -38,7 +105,7 @@
     <div class="container">
         <h1>🚲 Welcome to Bike Sharing System</h1>
         <p class="lead">Find, rent, and share bikes easily in your city.</p>
-        <a href="/Member/Register" class="btn btn-light btn-lg">Join Now</a>
+        <a href="/Member/Register" class="btn btn-light btn-lg"><i class="bi bi-person-plus"></i> Join Now</a>
     </div>
 </section>
 
@@ -46,19 +113,25 @@
 <section class="container text-center my-5">
     <div class="row">
         <div class="col-md-4">
-            <i class="feature-icon bi bi-bicycle"></i>
-            <h3>Rent a Bike</h3>
-            <p>Find and rent a bike near you in just a few clicks.</p>
+            <div class="feature-card">
+                <i class="feature-icon bi bi-bicycle"></i>
+                <h3>Rent a Bike</h3>
+                <p>Find and rent a bike near you in just a few clicks.</p>
+            </div>
         </div>
         <div class="col-md-4">
-            <i class="feature-icon bi bi-person-plus"></i>
-            <h3>Easy Registration</h3>
-            <p>Sign up and start riding within minutes.</p>
+            <div class="feature-card">
+                <i class="feature-icon bi bi-person-plus"></i>
+                <h3>Easy Registration</h3>
+                <p>Sign up and start riding within minutes.</p>
+            </div>
         </div>
         <div class="col-md-4">
-            <i class="feature-icon bi bi-chat-left-quote"></i>
-            <h3>Read Reviews</h3>
-            <p>Check out reviews before renting a bike.</p>
+            <div class="feature-card">
+                <i class="feature-icon bi bi-chat-left-quote"></i>
+                <h3>Read Reviews</h3>
+                <p>Check out reviews before renting a bike.</p>
+            </div>
         </div>
     </div>
 </section>
@@ -66,7 +139,7 @@
 <!-- How It Works -->
 <section class="container my-5">
     <h2 class="text-center mb-4">🚀 How It Works</h2>
-    <div class="row text-center">
+    <div class="row text-center steps">
         <div class="col-md-3">
             <h4>1️⃣ Sign Up</h4>
             <p>Register for free and create your account.</p>
@@ -90,8 +163,8 @@
 <section class="container cta my-5">
     <h2>Start Your Ride Today! 🚴</h2>
     <p>Join thousands of riders and explore your city like never before.</p>
-    <a href="/Member/Register" class="btn btn-light btn-lg">Sign Up Now</a>
+    <a href="/Member/Register" class="btn btn-light btn-lg"><i class="bi bi-arrow-right-circle"></i> Sign Up Now</a>
 </section>
 
-<!-- Bootstrap Icons -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

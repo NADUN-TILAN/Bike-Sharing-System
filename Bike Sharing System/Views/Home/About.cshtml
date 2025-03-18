@@ -4,36 +4,70 @@
 
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 
 <style>
     /* Custom Styles */
     .hero {
         background: url('/images/img-2.png') center/cover no-repeat;
         color: white;
-        padding: 80px 0;
+        padding: 100px 0;
         text-align: center;
+        position: relative;
+        border-radius: 15px;
     }
 
-        .hero h1 {
-            font-size: 3rem;
-            font-weight: bold;
-        }
+    .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 15px;
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 1;
+    }
 
     .section-title {
         font-weight: bold;
         color: #007bff;
+        margin-bottom: 20px;
     }
 
     .icon {
-        font-size: 2.5rem;
+        font-size: 3rem;
         color: #007bff;
+    }
+
+    .feature-box {
+        background: #f8f9fa;
+        padding: 20px;
+        border-radius: 10px;
+        transition: transform 0.3s;
+    }
+
+        .feature-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+    .cta {
+        background: linear-gradient(to right, #007bff, #00c6ff);
+        color: white;
+        padding: 40px;
+        border-radius: 10px;
     }
 </style>
 
 <!-- Hero Section -->
-<section class="hero">
-    <div class="container">
-        <h1>About Us</h1>
+<section class="hero d-flex align-items-center">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+        <h1 class="display-4 fw-bold">About Us</h1>
         <p class="lead">Connecting communities, one ride at a time. 🚲</p>
     </div>
 </section>
@@ -49,29 +83,32 @@
     <h2 class="text-center section-title">💡 Why Choose Us?</h2>
     <div class="row text-center mt-4">
         <div class="col-md-4">
-            <i class="icon bi bi-bicycle"></i>
-            <h4>Easy & Affordable</h4>
-            <p>Rent a bike anytime, anywhere at a low cost.</p>
+            <div class="feature-box">
+                <i class="icon bi bi-bicycle"></i>
+                <h4>Easy & Affordable</h4>
+                <p>Rent a bike anytime, anywhere at a low cost.</p>
+            </div>
         </div>
         <div class="col-md-4">
-            <i class="icon bi bi-globe"></i>
-            <h4>Eco-Friendly</h4>
-            <p>Reduce carbon footprint and promote a greener environment.</p>
+            <div class="feature-box">
+                <i class="icon bi bi-globe"></i>
+                <h4>Eco-Friendly</h4>
+                <p>Reduce carbon footprint and promote a greener environment.</p>
+            </div>
         </div>
         <div class="col-md-4">
-            <i class="icon bi bi-people"></i>
-            <h4>Community Driven</h4>
-            <p>Join a growing community of bike enthusiasts.</p>
+            <div class="feature-box">
+                <i class="icon bi bi-people"></i>
+                <h4>Community Driven</h4>
+                <p>Join a growing community of bike enthusiasts.</p>
+            </div>
         </div>
     </div>
 </section>
 
 <!-- Contact & Support -->
-<section class="container cta my-5 text-center p-4 bg-light">
+<section class="container cta my-5 text-center">
     <h2>📞 Contact & Support</h2>
-    <p>Have questions? Reach out to us anytime!</p>
-    <a href="/Home/Contact" class="btn btn-primary btn-lg">Get in Touch</a>
+    <p class="lead">Have questions? Reach out to us anytime!</p>
+    <a href="/Home/Contact" class="btn btn-light btn-lg fw-bold">Get in Touch</a>
 </section>
-
-<!-- Bootstrap Icons -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">

@@ -1,11 +1,35 @@
 ﻿@model List<Review>
-@foreach (var review in Model)
-{
-    <div class="card">
-        <div class="card-body">
-            <p>@review.Comment</p>
-            <p>⭐ @review.Rating</p>
-        </div>
-    </div>
-}
 
+<h2 class="text-center my-4">Customer Reviews</h2>
+
+<!-- Review List Section -->
+<div class="container">
+    <div class="row g-4">
+        @foreach (var review in Model)
+        {
+            <div class="col-md-4">
+                <div class="card shadow-sm" style="border-radius: 10px;">
+                    <div class="card-body">
+                        <p class="card-text mb-3">@review.Comment</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <!-- Display Rating as Stars -->
+                                @for (int i = 0; i < review.Rating; i++)
+                                {
+                                    <span class="text-warning">⭐</span>
+                                }
+                            </div>
+                            <div>
+                                <!-- Optionally, you can show the date of the review here -->
+                                <small class="text-muted">Posted on: @review.PostedDate.ToString("MMMM dd, yyyy")</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
