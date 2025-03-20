@@ -1,16 +1,15 @@
 ﻿@{
-    ViewData["Title"] = "Member";
+    ViewData["Title"] = "Register";
 }
 
 <h2 class="text-center my-4">Register for Bike Sharing</h2>
 
-<!-- Registration Form Section -->
 <div class="container d-flex justify-content-center align-items-center min-vh-100">
     <div class="card shadow-lg p-4" style="max-width: 500px; width: 100%; border-radius: 15px;">
         <div class="card-body">
             <h5 class="card-title text-center mb-4">Create Your Account</h5>
 
-            <form method="post">
+            <form method="post" action="@Url.Action("Register", "Member")">
                 <div class="mb-3">
                     <label for="FullName" class="form-label">Full Name</label>
                     <input type="text" name="FullName" class="form-control" placeholder="Enter your full name" required />
@@ -37,7 +36,7 @@
             </form>
 
             <div class="text-center mt-3">
-                <p>Already have an account? <a href="/Member/Login" class="text-primary">Sign In</a></p>
+                <p>Already have an account? <a href="@Url.Action("SignIn", "Member")" class="text-primary">Sign In</a></p>
             </div>
         </div>
     </div>

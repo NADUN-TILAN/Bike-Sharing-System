@@ -15,6 +15,6 @@ namespace Bike_Sharing_System.Models
         public string Password { get; set; }
         public string PreferredLocation { get; set; }
         public bool IsOfferingBike { get; set; }
-        public List<string> RentalHistory { get; set; }
+        public List<string> RentalHistory { get; set; } = new List<string>();
     }
 }

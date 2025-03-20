@@ -34,17 +34,26 @@
             }
 
         .btn-signin {
-            background-color: white;
-            color: #007bff;
+            background-color: transparent;
+            color: white;
             font-weight: bold;
-            border-radius: 30px;
+            border: 2px solid white;
+            border-radius: 50px;
             padding: 8px 20px;
-            transition: 0.3s;
+            transition: 0.3s ease-in-out;
+            display: flex;
+            align-items: center;
+            font-size: 1rem;
         }
 
+            .btn-signin i {
+                font-size: 1.2rem;
+            }
+
             .btn-signin:hover {
-                background-color: #0056b3;
-                color: white;
+                background-color: white;
+                color: #007bff;
+                border-color: white;
             }
 
         /* Footer Styling */
@@ -82,7 +91,12 @@
                     <li class="nav-item">@Html.ActionLink("Home", "Index", "Home", null, new { @class = "nav-link" })</li>
                     <li class="nav-item">@Html.ActionLink("About", "About", "Home", null, new { @class = "nav-link" })</li>
                     <li class="nav-item">@Html.ActionLink("Contact", "Contact", "Home", null, new { @class = "nav-link" })</li>
-                    <li class="nav-item"><a href="@Url.Action("SignIn", "Member")" class="btn btn-signin">Sign In</a></li>
+                    <li class="nav-item">
+                        <a href="@Url.Action("SignIn", "Member")" class="btn btn-signin">
+                            <i class="bi bi-person-circle text-white"></i> <!-- White User Icon -->
+                        </a>
+                    </li>
+
                 </ul>
             </div>
         </div>
